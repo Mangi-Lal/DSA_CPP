@@ -33,20 +33,21 @@ int main()
         cout << "Element Not found";
     */
     // Optimised Approach for sorted matrix
-    int r=0, c=m-1;
-    while (true)
+    int r=0, c=n-1;
+    bool check=false;
+    while (r<m && c>=0)
     {
-        if (arr[r][c] == key)
-        {
+        if (arr[r][c] == key){
+            check = true;
             cout<<r<<" "<<c<<endl;
-            cout<<i<<" "<<j<<endl;
         }
-        else if (arr[r][c] =< key)
-            c--;
-        else if (arr[r][c] >= key)
-        {
-            r++;
-        }  
+        arr[r][c]>key ? c-- : r++ ;
     }
-    return 0;
+    if (check)
+        cout<<"Element found"<<endl;
+    else
+        cout<<"Element Not found"<<endl;
+    
+
+  return 0;
 }
