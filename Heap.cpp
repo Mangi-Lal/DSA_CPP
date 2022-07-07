@@ -3,11 +3,11 @@ using namespace std;
 
 int main()
 {
-    int a = 36;
-    int *p = new int();
+    int a = 36; //Stored in stack
+    int *p = new int(); // allocate memory in heap
     *p = 10;
 
-    delete(p);
+    delete(p); // Deallocate memory
 
     p = new int[4];
 
