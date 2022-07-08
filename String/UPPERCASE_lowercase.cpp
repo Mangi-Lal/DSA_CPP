@@ -33,12 +33,6 @@ int main()
     // lowercase
     transform(s1.begin(),s1.end(),s1.begin(), ::tolower);
     cout<<s1<<"\n";
-
-
-
-
-
-
-
+    
     return 0;
 }
