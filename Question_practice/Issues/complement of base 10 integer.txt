@@ -1,0 +1,28 @@
+class Solution {
+public:
+    int bitwiseComplement(int n) {
+        int sum = 0;
+        while(n!=0){
+            int mask = n & 1;
+            mask = mask ^ 1;
+            sum = sum*10 + mask;
+            n = n >> 1;
+        }
+        int res = binarytodecimal(sum);
+        return res;
+    }
+    int binarytodecimal(int n1){
+        int i = 0;
+        int ans = 0;
+        while (n1!=0)
+        {
+            int bit = n1 % 10;
+            if(bit == 1)
+                ans = bit*pow(2,i) + ans;
+
+            n1 = n1 / 10;
+            i++;
+        }
+        return ans;
+    }
+};
